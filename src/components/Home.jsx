@@ -7,6 +7,14 @@ import Jor2 from '../assets/jordon (2).png'
 import Jor3 from '../assets/jordon (3).png'
 import Jor4 from '../assets/jordon (4).png'
 
+const type = [
+  { name: "Air Max", image: "https://i.ebayimg.com/images/g/GzMAAOSwd7Flo~qu/s-l400.jpg" },
+  { name: "Low Dunk", image: "https://i.ebayimg.com/images/g/GzMAAOSwd7Flo~qu/s-l400.jpg" },
+  { name: "Air Jordan", image: "https://i.ebayimg.com/images/g/GzMAAOSwd7Flo~qu/s-l400.jpg" },
+  { name: "Retro High", image: "https://i.ebayimg.com/images/g/GzMAAOSwd7Flo~qu/s-l400.jpg" },
+  { name: "SB Force", image: "https://i.ebayimg.com/images/g/GzMAAOSwd7Flo~qu/s-l400.jpg" },
+];
+
 const Home = () => {
   return (
     <>
@@ -48,22 +56,85 @@ const Home = () => {
       <Container>
         <Message>
           <span>Your next obsession starts here</span>
-          <i class="bi bi-star-fill" style={{ color:"blue",  fontSize: "30px",}}  ></i>
+          <i class="bi bi-star-fill" style={{ color: "blue", fontSize: "30px", }}  ></i>
         </Message>
         <Message>
           <span>Because every step deserves the spotlight!</span>
-          <i class="bi bi-star-fill" style={{ color:"blue", fontSize: "30px", }} ></i>
+          <i class="bi bi-star-fill" style={{ color: "blue", fontSize: "30px", }} ></i>
         </Message>
         <Message>
           <span>Slay the streets, one step at a time</span>
         </Message>
       </Container>
 
+      <Category>
+        <h1>
+          Categories
+        </h1>
+
+        <Part>
+          <Grid>
+            {type.map((type, index) => (
+              <Part key={index}>
+                <Image src={type.image} alt={type.name} />
+                <Identity>{type.name}</Identity>
+              </Part>
+            ))}
+          </Grid>
+        </Part>
+
+      </Category>
     </>
   );
 };
 
 export default Home
+const Part = styled.div`
+  /* display: flex; */
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+`;
+
+const Identity = styled.p`
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+`;
+
+const Image = styled.img`
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+`;
+
+const Card = styled.div`
+  text-align: center;
+`;
+const Grid = styled.div`
+ display: flex;
+ justify-content: center;
+ gap: 10%;
+ flex-wrap: wrap;
+`;
+
+const Category = styled.div`
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 15%;
+ margin-top: 3%;
+ padding-bottom: 10%;
+ font-family: "Bai Jamjuree", serif;
+ font-weight: bolder;
+ font-style: bold;
+ color: #e96b6b;
+ border: 5px solid green;
+`;
 
 const Container = styled.div`
   display: flex;
