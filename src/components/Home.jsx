@@ -48,11 +48,11 @@ const Home = () => {
       <Container>
         <Message>
           <span>Your next obsession starts here</span>
-          <i class="bi bi-star-fill" style={{ color:"blue",  fontSize:"" }}  ></i>
+          <i class="bi bi-star-fill" style={{ color:"blue",  fontSize: "30px",}}  ></i>
         </Message>
         <Message>
           <span>Because every step deserves the spotlight!</span>
-          <i class="bi bi-star-fill" style={{ color:"blue" }} ></i>
+          <i class="bi bi-star-fill" style={{ color:"blue", fontSize: "30px", }} ></i>
         </Message>
         <Message>
           <span>Slay the streets, one step at a time</span>
