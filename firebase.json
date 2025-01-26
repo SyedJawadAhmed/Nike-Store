@@ -1,0 +1,9 @@
+{
+    "dependencies": {
+      "firebase": "^9.0.0",
+      "@firebase/firestore": "^3.0.0",
+      "@firebase/auth": "^0.20.0"
+    }
+  }
+  
+  
