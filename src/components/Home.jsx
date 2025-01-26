@@ -78,6 +78,7 @@ const Home = () => {
               <Part key={index}>
                 <Image src={type.image} alt={type.name} />
                 <Identity>{type.name}</Identity>
+                 
               </Part>
             ))}
           </Grid>
